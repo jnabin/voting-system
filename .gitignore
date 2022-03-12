@@ -1,0 +1,7 @@
+/.vs/*
+/voting-system/bin/*
+/voting-system/obj/*
+/Core/bin/*
+/Core/obj/*
+/Persistence/bin/*
+/Persistence/obj/*
