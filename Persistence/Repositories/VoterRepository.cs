@@ -1,5 +1,6 @@
 ﻿using Core.Domain;
 using Core.Repositories;
+using System.Linq;
 
 namespace Persistence.Repositories
 {

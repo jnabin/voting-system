@@ -10,7 +10,7 @@ namespace Core.Domain
     {
         public Candidate()
         {
-            this.Votes = new HashSet<Vote>();
+            this.Votes = new List<Vote>();
         }
 
         public int Id { get; set; }

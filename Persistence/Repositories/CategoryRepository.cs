@@ -12,6 +12,7 @@ namespace Persistence.Repositories
     {
         public CategoryRepository(VoteDbContext context) : base(context)
         {
+
         }
     }
 }

@@ -1,3 +1,4 @@
+using Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +26,11 @@ namespace voting_system
                option.UseSqlServer(Configuration.GetConnectionString("database"))
             );
 
-            services.AddControllers();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddControllers().
+                AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "voting_system", Version = "v1" });
